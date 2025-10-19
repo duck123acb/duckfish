@@ -1,8 +1,24 @@
-#include <iostream>
+#include "raylib.h"
 
-int main () {
+int main()
+{
+    InitWindow(800, 800, "Duckfish");
+	SetWindowState(FLAG_VSYNC_HINT);
+	SetTargetFPS(60);
 
-    std::cout << "Hello World" << std::endl;
-    
-    return 0;
+        while (!WindowShouldClose())
+        {
+		// LOGIC
+
+		// DRAWING
+
+		BeginDrawing();
+
+        ClearBackground(BLACK);
+
+		EndDrawing();
+	}
+
+	CloseWindow();
+	return 0;
 }
