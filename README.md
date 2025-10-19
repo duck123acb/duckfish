@@ -1,0 +1,4 @@
+# duckfish 
+
+## todo
+- makefile

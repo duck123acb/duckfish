@@ -1,0 +1,61 @@
+# =========================
+# General OS / Editor Files
+# =========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+
+# =========================
+# Build Artifacts
+# =========================
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# =========================
+# CMake / Make / Build Output
+# =========================
+/build/
+/cmake-build-*/
+/CMakeFiles/
+CMakeCache.txt
+Makefile
+*.cmake
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# =========================
+# Emscripten / Web Builds
+# =========================
+*.wasm
+*.js
+*.html
+/emcc_build/
+/dist/
+/web_build/
+
+# =========================
+# VS Code
+# =========================
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+# (we ignore everything in .vscode except tasks/launch)
+
+# =========================
+# Backup & Misc
+# =========================
+*.bak
+*.old
+*.orig
+*~

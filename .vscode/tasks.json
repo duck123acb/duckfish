@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C++",
+            "type": "shell",
+            "command": "clang++ -fcolor-diagnostics -fansi-escape-codes -g ${file} -o ${workspaceFolder}/build/${fileBasenameNoExtension} && ${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}
