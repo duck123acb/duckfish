@@ -1,11 +1,10 @@
-// assumes you have a raylib in your HOME directory
 {
     "version": "2.0.0",
     "tasks": [
         {
             "label": "Build and Run Raylib",
             "type": "shell",
-            "command": "mkdir -p ${workspaceFolder}/build && clang++ -std=c++17 -fcolor-diagnostics -fansi-escape-codes -g ${file} -o ${workspaceFolder}/build/${fileBasenameNoExtension} -I$HOME/raylib/src -L$HOME/raylib/src -lraylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo && ${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "command": "make && ${workspaceFolder}/build/${fileBasenameNoExtension}",
             "group": {
                 "kind": "build",
                 "isDefault": true

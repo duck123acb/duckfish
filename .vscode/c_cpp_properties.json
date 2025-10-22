@@ -4,7 +4,11 @@
         {
             "name": "Mac",
             "includePath": [
-                "~/raylib/src"
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/src",
+                "${HOME}/raylib/src",
+                "/usr/local/include",
+                "/Library/Developer/CommandLineTools/usr/include/c++/v1"
             ],
             "defines": [],
             "macFrameworkPath": [
