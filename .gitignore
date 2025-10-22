@@ -28,7 +28,6 @@ Thumbs.db
 /cmake-build-*/
 /CMakeFiles/
 CMakeCache.txt
-Makefile
 *.cmake
 *.ninja
 *.ninja_deps
