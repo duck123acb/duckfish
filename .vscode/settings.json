@@ -1,0 +1,12 @@
+{
+    "cSpell.words": [
+        "Bitboard",
+        "Duckfish",
+        "dylib",
+        "emcc",
+        "Emscripten"
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}

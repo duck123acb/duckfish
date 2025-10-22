@@ -44,14 +44,6 @@ CMakeCache.txt
 /web_build/
 
 # =========================
-# VS Code
-# =========================
-.vscode/*
-!.vscode/tasks.json
-!.vscode/c_cpp_properties.json
-# (we ignore everything in .vscode except tasks/launch)
-
-# =========================
 # Backup & Misc
 # =========================
 *.bak
