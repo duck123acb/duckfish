@@ -1,18 +1,17 @@
 #include "render.h"
 #include "piece_type.h"
-#include "bitboard.h"
 
 Image atlas;
-int pieceScaleFactor;
-Texture pieceTextures[];
+float pieceScaleFactor;
+Texture pieceTextures[12];
 
 void Setup() {
     atlas = LoadImage("assets/Chess_Pieces_Sprite.svg.png");
-    int frameSideLength = atlas.height / 6;
+    float frameSideLength = atlas.height / 6;
     pieceScaleFactor = SQUARE_SIZE / frameSideLength; 
 
-    for (int i = 0; i != Final; i++)
-    {
+    for (int
+         i = 0; i != Final; i++) {
         PieceType type = static_cast<PieceType>(i);
         Rectangle frame = {
             frameSideLength * (type % 6),
@@ -21,7 +20,7 @@ void Setup() {
             frameSideLength
         };
         Image img = ImageFromImage(atlas, frame);
-        Texture2D txt = LoadTextureFromImage(img);
+        pieceTextures[type] = LoadTextureFromImage(img);
 
         UnloadImage(img);
     }
@@ -37,10 +36,20 @@ void DrawCheckerboard() {
     }
 }
 
-void RenderPieces(Bitboard bitboards[]) {
-    
-    
+void DrawPieces(Bitboard bitboards[]) {
+    for (int i = 0; i != Final; i++) {
+        PieceType type = static_cast<PieceType>(i);
+        Bitboard bitboard = bitboards[type];
 
-    // DrawTextureEx(txt, {0, 0}, 0, scaleFactor, WHITE);
-    
+        while (bitboard) { // bitboard != 0
+            int sq = __builtin_ctzll(bitboard); // counts trailing zeros to get the next sig dig
+            bitboard &= bitboard - 1; // remove that sig dig to for next iteration
+
+            float row = sq / 8;
+            float col = sq % 8;
+            Vector2 pos = { col * SQUARE_SIZE, row * SQUARE_SIZE };
+
+            DrawTextureEx(pieceTextures[type], pos, 0, pieceScaleFactor, WHITE);
+        }
+    }
 }

@@ -20,6 +20,7 @@ int main()
         ClearBackground(BLACK);
 
         DrawCheckerboard();
+        DrawPieces(board.bitboards);
 
 		EndDrawing();
 	}
