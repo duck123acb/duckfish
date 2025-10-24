@@ -4,17 +4,19 @@
 enum PieceType {
     WhiteKing,
     WhiteQueens,
-    WhiteRooks,
     WhiteBishops,
     WhiteKnights,
+    WhiteRooks,
     WhitePawns,
 
     BlackKing,
     BlackQueens,
-    BlackRooks,
     BlackBishops,
     BlackKnights,
+    BlackRooks,
     BlackPawns,
+
+    Final
 };
 
 #endif

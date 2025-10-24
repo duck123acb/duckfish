@@ -8,6 +8,8 @@ const Color CHECKERBOARD_DARK  = {180, 136, 98, 255};
 
 const int SQUARE_SIZE = 80;
 
-void DrawBoard(); // eventually drawBoard(board);
+void Setup();
+void DrawCheckerboard();
+void DrawPieces(Bitboard[]);
 
 #endif

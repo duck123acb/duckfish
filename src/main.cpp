@@ -11,12 +11,15 @@ int main()
 
     
 
+    Board board;
+
+
     while (!WindowShouldClose()) {
 		BeginDrawing();
 
         ClearBackground(BLACK);
 
-        DrawBoard();
+        DrawCheckerboard();
 
 		EndDrawing();
 	}

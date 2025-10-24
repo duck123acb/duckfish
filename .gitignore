@@ -50,3 +50,10 @@ CMakeCache.txt
 *.old
 *.orig
 *~
+
+# =========================
+# VS Code
+# =========================
+.vscode/*
+!.vscode/tasks.json
+!.vscode/c_cpp_properties.json
